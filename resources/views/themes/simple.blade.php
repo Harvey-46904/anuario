@@ -21,6 +21,8 @@
         .img-circle {
             border-radius: 50%;
             object-fit: cover; /* Mantiene la imagen dentro del círculo */
+            width: 100px;
+            height: 100px;
         }
         .bg-gradient-primary-to-secondary {
             background:linear-gradient(181deg, {{ $response["colegio"]->color_institucional}},{{ $response["colegio"]->color_secundario}} ) !important
