@@ -4,11 +4,11 @@ namespace App\Actions;
 use Illuminate\Support\Facades\Auth; // Asegúrate de importar la clase Auth
 use TCG\Voyager\Actions\AbstractAction;
 use Illuminate\Support\Facades\Log;
-class PublicacionesList extends AbstractAction
+class PublicacionesPropias extends AbstractAction
 {
     public function getTitle()
     {
-        return 'Subir Contenido';
+        return 'Ver mis fotos';
     }
 
     public function getIcon()
@@ -24,7 +24,7 @@ class PublicacionesList extends AbstractAction
     public function getAttributes()
     {
         return [
-            'class' => 'btn btn-sm btn-success pull-right',
+            'class' => 'btn btn-sm btn-info pull-right',
         ];
     }
 
@@ -40,6 +40,6 @@ class PublicacionesList extends AbstractAction
 
     public function getDefaultRoute()
     {
-         return route('publicaciones.create',  $this->data->id);
+         return route('publicaciones.index',  $this->data->id);
     }
 }

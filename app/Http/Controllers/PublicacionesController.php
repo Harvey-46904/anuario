@@ -14,6 +14,7 @@ class PublicacionesController extends Controller
         return view("vendor.voyager.publicaciones.publicaciones_form",compact('id_anuario')); 
     }
     public function publicaciones_anuario($id_anuario){
+       // return response(["data"=>$id_anuario]);
         $anuario=$id_anuario;
         $user = Auth::user()->id;
         $resultado_filtrado=DB::table("publicaciones")
@@ -54,6 +55,7 @@ class PublicacionesController extends Controller
             'id_user'=>$user->id,
             'moderada'=>0
         ]);
+       
         return redirect()->route('publicaciones.index', ['id_anuario' => $id_anuario])->with('success', 'Usuarios insertados exitosamente.');
     }
 }

@@ -30,7 +30,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::post('/lista/save/{id_anuario}', 'EstudianteController@gestionar_excel')->name('post.exel');
     
 
-    Route::get('/publicaciones/{id_anuario}', 'PublicacionesController@publicaciones_anuario')->name('publicaciones.index');
+    Route::get('/publicaciones_propias/{id_anuario}', 'PublicacionesController@publicaciones_anuario')->name('publicaciones.index');
     Route::get('/publicaciones_create/{id_anuario}', 'PublicacionesController@publicaciones_create')->name('publicaciones.create');
     Route::post('/publicaciones/save/{id_anuario}', 'PublicacionesController@crear_publicacion')->name('post.publicacion');
     

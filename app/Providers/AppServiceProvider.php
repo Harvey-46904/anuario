@@ -11,6 +11,8 @@ use App\Models\User as Usernew;
 use TCG\Voyager\Facades\Voyager;
 use \App\Actions\EstudiantesList;
 use \App\Actions\PublicacionesList;
+use \App\Actions\PublicacionesPropias;
+
 use \App\Actions\AnuarioList;
 
 class AppServiceProvider extends ServiceProvider
@@ -38,6 +40,8 @@ class AppServiceProvider extends ServiceProvider
         Voyager::addAction(EstudiantesList::class);
         Voyager::addAction(PublicacionesList::class);
         Voyager::addAction(AnuarioList::class);
+        Voyager::addAction(PublicacionesPropias::class);
+        
         
     }
 }

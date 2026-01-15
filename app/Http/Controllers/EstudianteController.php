@@ -67,9 +67,9 @@ class EstudianteController extends Controller
         } catch (\Exception $e) {
             // Deshacer la transacción en caso de error
             DB::rollBack();
-
+  throw $e;
             // Manejar el error
-            return redirect()->back()->with('error', 'Error al insertar usuarios.');
+            //return redirect()->back()->with('error', 'Error al insertar usuarios.');
         }
 
     }
